@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: rgb(251, 255, 0);
+        }
+        .mySlides{
+            height: 550px;
+            width: 800px;
+            display: none;
+        }
+</style>
+<body>
+    <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+    <center>
+        <img class="img-responsive"  id="oneig" src="https://saachibaat.com/wp-content/uploads/2021/08/Surya-Namaskar.jpg">
+        <div id="show">
+        <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/1_59.jpg?itok=Qu-ZM_Cr">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/2_42.jpg?itok=vZwu_k3W">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/3_33.jpg?itok=7t_8ZcSK">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/9_3.jpg?itok=gPdKYGhF">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/5_17.jpg?itok=DRXR7uqP">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/6_17.jpg?itok=N9lr1iKR">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/7_13.jpg?itok=Jvr3JhXk">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/8_7.jpg?itok=Gv0sP_Hc">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/9_3.jpg?itok=gPdKYGhF">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/10_8.jpg?itok=i2CEdOTN">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/11_4.jpg?itok=TqQ-ksKt">
+            <img class="mySlides img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/1_59.jpg?itok=Qu-ZM_Cr">
+            </div><br>
+            <button id="open" onclick="start0()">start</button>
+    </center>
+    <script>
+        function start0(){
+document.getElementById("oneig").style.display="none"
+document.getElementById("open").style.display="none"
+document.getElementById("show").style.display="block"
+
+    var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+var synth = window.speechSynthesis;
+        setInterval(function(){
+            speech_data = "next"
+    utterThis = new SpeechSynthesisUtterance(speech_data)
+    synth.speak(utterThis)
+        },5000)
+        }
+        
+   
+    </script>
+    <script src="logout.js"></script>
+</body>
+</html>

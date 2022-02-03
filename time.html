@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: gold;
+        }
+        .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+    </style>
+    <body>
+        <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+        <center>
+            <label style="font-size: 30px;">
+                Spend Time With Your parents, Frends and Pet
+            </label><br>
+            <span>
+                <img style="height: 400px;" src="https://images.news18.com/ibnlive/uploads/2021/08/1627801990_parent-day-2021a.jpg">
+            </span>
+            <span>
+                <img style="height: 400px;" src="https://images.wsj.net/im-152173?width=1280&size=1">
+            </span>
+            <span>
+                <img src="https://www.carrco.com.au/wp-content/uploads/Pet-Custody.jpg" style="height: 400px;">
+            </span>
+            <br><br>
+            <div class="slidecontainer">
+                <h3><b>How much Time you have given to parents, Frends and Pet</b></h3>
+                <input onchange="slide()" style="width: 20%;" type="range" min="1" max="60" value="1" class="slider" id="myRange">
+                <h4><b id="time">1 Minute</b></h4>
+                <button onclick="opd()" class="btn btn-success">Submit</button>
+              </div>
+        </center>
+        <br>
+        <script>
+            vale="1 Minute"
+            function slide(){
+                vale=document.getElementById("myRange").value
+                console.log(vale)
+                if(vale == "1"){
+                    vale= "1 Minute"
+                }
+                else{
+                    vale=vale+" Minutes"
+                }
+                document.getElementById("time").innerHTML=vale
+            }
+            function opd(){
+                alert("Very Good you have spend "+vale+" with your parents, Frends and Pet")
+                document.getElementById("myRange").value=1
+                vale="1 Minute"
+                document.getElementById("time").innerHTML=vale
+            }
+       </script>
+       <script src="logout.js"></script>
+    </body>
+</html>

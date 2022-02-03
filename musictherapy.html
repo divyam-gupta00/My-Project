@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: rgb(251, 255, 0);
+        }
+        #logout
+{
+	font-size: 20px; float: left;
+}
+    </style>
+    <body onload="changed()">
+        <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+        <center>
+            <label><h1><b>Put Your Hedphones</b></h1></label><br><br>
+        <iframe id="ponop" width="85%" height="90%" src="https://www.youtube.com/embed/xQ6xgDI7Whc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <br><br><br><p></p>
+    </center>
+    <script>
+        setInterval(changed, 40000)
+        function changed(){
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.getElementById("ponop").style.height="35%"
+            } else {
+                document.getElementById("ponop").style.height="90%"
+            }
+        }
+    </script>
+    <script src="logout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Stress Buster</title>
+    <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function dio(){
+    document.getElementById("hodof").style.display = "none";
+}
+function myFunction(){
+    document.getElementById("agag").src="Alarm-Clock Sound!!!.mp3"
+    document.getElementById("hodof").style.display = "block";
+}
+    </script>
+</head>
+<style>
+    #logout {
+        font-size: 20px;
+        float: left;
+    }
+</style>
+
+<body>
+    <audio id="agag" autoplay="true" src=""></audio> 
+    <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+    
+    <center>
+        <h1>
+            <b>
+                Acupuncture
+            </b>
+        </h1>
+        <a target="_blank" href="https://www.amazon.in/SOLARA-exercise-equipment-strengthener-Exercise/dp/B09G5XZVCT?ref_=Oct_d_orecs_d_3404718031&pd_rd_w=epTXh&pf_rd_p=f1ccc94f-0f12-4efc-b35f-2af59246bc78&pf_rd_r=SNF8KC81ZYD3BC0R33KA&pd_rd_r=1dac6da5-1f3f-4f14-b2fb-688eb9d1f83d&pd_rd_wg=jbQbN&pd_rd_i=B09G5XZVCT">
+            <img class="img-responsive" style="height: 50%; border: ridge; width: 450px;" src="https://m.media-amazon.com/images/I/71z96DbBdCL._SX679_.jpg"></a>
+            <h6><b>If you have the Acupuncture muchine so Start for 5 minutes</b></h6>
+            <h3 onclick="dio()"><button onclick="setTimeout(myFunction,500000)" class="btn btn-primary"
+                id="hodof">Start</button></h3>            
+    </center>
+    <script src="logout.js"></script>
+</body>
+
+</html>

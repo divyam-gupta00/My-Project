@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .mySlides{
+            width: 90%;
+            height: 550px;
+        }
+        .odp{
+     display: inline;
+        }
+    </style>
+    <body>
+        <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+        <center>
+            <h1>
+                <b>Stress Buster Food</b>
+            </h1>
+            <br>
+            <img class="mySlides img-responsive" src="https://www.foodbusinessnews.net/ext/resources/FBN-Features/6/NutVarieties_Lead.jpg?t=1530037785&width=1080">
+            <img class="mySlides img-responsive" src="https://blog-images.pharmeasy.in/2019/08/21192922/Blog_3.jpg">
+            <img class="mySlides img-responsive" src="https://www.verywellhealth.com/thmb/kXxeAfjFaNtlyEYmCRtKxoLbtCY=/2880x1920/filters:no_upscale():max_bytes(150000):strip_icc()/uncover-hidden-egg-ingredients-1324275-primary-recirc-3cf777cca7044ee1992cc0a27d6449fa.jpg">
+            <img class="mySlides img-responsive" src="https://post.healthline.com/wp-content/uploads/2020/08/dark-chocolate-1200x628-facebook-1200x628.jpg">
+        </center>
+        <br><br>
+        <span class="odp">
+        <h5 class="odp">
+            <b>
+1. Brazil nuts<br><br>
+2. Fatty fish<br><br>
+3. Eggs<br><br>
+4. Pumpkin seeds<br><br>
+5. Dark chocolate<br><br>
+6. Turmeric<br><br>
+7. Chamomile<br><br>
+8. Yogurt<br><br>
+9. Green tea<br><br>
+10. Honey<br><br>
+            </b>
+        </h5></span>
+<script>
+    var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+<script src="logout.js"></script>
+    </body>
+</html>

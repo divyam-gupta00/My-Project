@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: rgb(251, 255, 0);
+        }
+        h1
+  {
+      color: red; 
+      font-size: 40px;
+  }
+  #myCanvas
+  {
+      border-width:10px;
+      background-color: white; 
+      border-style:ridge;
+  } 
+
+  input
+  {
+    margin-right: 20px;
+  }
+  
+</style>
+<body onload="start6()">
+    <button onclick="brop()" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button>
+    <div align="center">
+        <h1>Make a Drawing</h1>
+        
+            <canvas id="myCanvas" width="800" height="600"></canvas>
+                <br><br >
+        <div>
+            <span><input placeholder="Suggest Color" id="colorD" type="text"></span>
+            <span><input placeholder="Suggest Width" id="widthD" type="number"></span>
+            <span><input placeholder="Suggest Radius" id="radiD" type="number"></span>
+        <span><button onclick="clear1()" class="btn btn-primary">Clear</button></span>
+        </div>
+        <div>
+            <span><input id="filllcolllm" type="text" placeholder="Color For Canvas"></span>
+            <span><button onclick="canvasfil()" id="filll" class="btn btn-primary">Fill</button></span>
+        </div>
+        <br> <button><a download="example.jpg" href="" onclick="downloadCanvas(this);">Download Your Drawing</a></button><br>
+        <br><input onclick="sub()" type="submit" class="btn btn-primary" style="width: 425px; margin-left: 12px;"><br > 
+    
+            </div>
+            <script>
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+function start6(){
+if (isMobile) {
+    alert("Only Can use in Laptop")
+    window.location="room.html"
+} else {
+    
+}
+}
+
+
+                function sub(){
+                    clear1()
+                    alert("Very Good You Have Submited The Drawing")
+                }
+                async function downloadCanvas(el) {
+  const imageURI = canvas.toDataURL("image/jpg");
+  el.href = imageURI;
+};
+                canvas= document.getElementById("myCanvas")
+ctx=canvas.getContext("2d")
+mouseposition= "";
+canvas.addEventListener("mousedown", mouse_down)
+function mouse_down() {
+mouseposition= "mousedown"
+}
+canvas.addEventListener("mouseup", mouse_up)
+function mouse_up() {
+mouseposition= "mouseup"
+}
+canvas.addEventListener("mouseleave", mouse_leave)
+function mouse_leave() {
+mouseposition= "mouseleave"
+}
+canvas.addEventListener("mousemove", mouse_move)
+function mouse_move(e) {
+  widthVa= document.getElementById("widthD").value
+  colorva= document.getElementById("colorD").value
+  radius= document.getElementById("radiD").value
+
+currentX_position= e.clientX- canvas.offsetLeft;
+currentY_position= e.clientY- canvas.offsetTop;
+
+if(mouseposition == "mousedown"){
+    console.log("inSideIt")
+    ctx.beginPath()
+    ctx.strokeStyle= colorva;
+  ctx.lineWidth= widthVa;
+
+  ctx.moveTo(lastX_pos, lastY_pos)
+
+  ctx.arc(currentX_position, currentY_position, radius, 0, 2*Math.PI)
+  ctx.stroke() 
+}
+lastX_pos= currentX_position;
+lastY_pos= currentY_position;
+}
+function clear1(){
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+}
+filcol="rgb(254, 254, 254)"
+function canvasfil() {
+  filcol=document.getElementById("filllcolllm").value
+ctx.rect(0, 0, canvas.width,canvas.height);
+ctx.fillStyle = filcol;
+ctx.fill();
+}
+     </script>  
+     <script src="logout.js"></script>  
+</body></html>

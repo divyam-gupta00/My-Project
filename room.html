@@ -1,0 +1,197 @@
+<html>
+
+<head>
+  <title>Stress Buster</title>
+  <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+  <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="game.js"></script>
+</head>
+<style>
+  body {
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url("WhatsApp Image 2022-01-24 at 11.23.36 AM.jpeg");
+  }
+
+  #maindiv {
+    background-color: whitesmoke;
+    height: 500px;
+    width: 600px;
+    border-style: double;
+    box-shadow: 10px 10px 5px rgba(0, 255, 76, 0.329);
+  }
+
+  .mus {
+    background-color: rgb(13, 103, 238);
+    border: black;
+    height: 30px;
+    width: 30%;
+    font-weight: bold;
+    color: black;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .bbbb {
+    color: black;
+  }
+
+  .hji {
+    display: inline;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: #f32121;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #f32121;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .disp{
+    display: inline;
+  }
+</style>
+
+<body onload="plsload()">
+  <button onclick="logout()" style="margin-left: 0px; margin-top: 0%;" id="logout"
+    class="btn btn-danger">Logout</button>
+  <audio id="aaaap" autoplay="true" src="[Royalty Free Music] - In The Jungle.mp3"></audio>
+  <br> 
+  <center>
+
+    <h1 id="pointo" class="disp" style="background-color: rgba(245, 245, 245, 0.932); width: fit-content; padding: 5px;"></h1><img id="ento" src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" class="disp" style="height: 50px; width: 50px; border-radius: 50%;">
+    <div id="maindiv" style=" margin-top: 50px;">
+      <button onclick="oa()" class="text-uppercase mus btn btn-primary" s><a class="bbbb" href="musictherapy.html">music therapy</a></button>
+      <button onclick="ob()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="walk.html">Quick Walk</a></button>
+      <button onclick="oc()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="Acupuncture.html">Acupuncture</a></button>
+      <button onclick="od()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="meditation.html">Meditation</a></button>
+      <button onclick="oe()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="time.html">Time Spend</a></button>
+      <button onclick="og()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="food.html">Food</a></button>
+      <button onclick="oh()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="pray.html">surya namaskar </a></button>
+      <button onclick="oi()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="pranayama.html">pranayama</a></button>
+      <button onclick="oj()"  class="text-uppercase mus btn btn-primary"><a class="bbbb" href="Paint.html">Game</a></button>
+      <center style="margin-top: 50%;">
+        <h6><b>If you have any disease</b></h6>
+        <span class="hji"><label>No</label></span>
+        <span class="hji">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </span>
+        <span class="hji"><label>Yes</label></span>
+      </center><br>
+      <h4 style="float: left; margin-left: 10px;"><a href="chat.html"><b>Tell Your Stress Buster Tips <span class="glyphicon glyphicon-arrow-right"></span></b></a></h4><br>
+     <br><br><button style="float: left; margin-left: 10px; width: fit-content;" class="btn btn-success" onclick="doupo()">Share</button>
+    </div>
+
+    <script>
+      function logout() {
+        localStorage.removeItem("name")
+        window.location = "index.html"
+        let person = prompt("How much ratings you will give to this website"+"pls tell us your Experience", "3 Stars");
+        let text;
+        if (person == null || person == "" ) {
+          text = "User cancelled the prompt.";
+        } else {
+          alert("thanks for Rating "+"our Website")
+        }
+      }
+      function oa(){
+        window.location="musictherapy.html"
+      }
+      function ob(){
+        window.location="walk.html"
+      }
+      function oc(){
+        window.location="Acupuncture.html"
+      }
+      function od(){
+        window.location="meditation.html"
+      }
+      function oe(){
+        window.location="time.html"
+      }
+      function og(){
+        window.location="food.html"
+      }
+      function oh(){
+        window.location="pray.html"
+      }
+      function oi(){
+        window.location="pranayama.html"
+      }
+      function oj(){
+        window.location="Paint.html"
+      }
+
+      link= localStorage.getItem("link")
+      function doupo(){
+  navigator.clipboard.writeText("Welcome"+" Join Our Stress Buster App \n \n"+link);
+  
+  /* Alert the copied text */
+  alert("Copied the link");
+      }
+    </script>
+  </center>
+  <br><br>
+
+</body>
+</html>

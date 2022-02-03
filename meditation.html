@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Stress Buster</title>
+        <link class="img-circle"  rel="icon" href="WhatsApp Image 2022-02-01 at 9.13.13 PM-modified.png">
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: rgb(251, 255, 0);
+        }
+        #logout
+{
+	font-size: 20px; float: left;
+}
+.slider {
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+    </style>
+    <body>
+        <button onclick="brop()" style="float: left;" id="logout" class="btn btn-danger"><a href="room.html"><i class="fa fa-home"></i></a></button><br>
+            <center>
+                <h1>
+                    <b>Meditation</b>
+                </h1>
+                <span>
+                <img class="img-responsive" style="height: 400px;" src="image-removebg-preview.png">
+                </span>
+                <audio autoplay="true" id="vol" src=""></audio>
+                <br>
+                <select id="opopo">
+                    <option value="no">Time</option>
+                    <option value="3">3 Min</option>
+                    <option value="4">4 Min</option>
+                    <option value="5">5 Min</option>
+                </select>
+                <br>
+                <h1 id="demo">00:00</h1>
+                <br>
+                <button id="butt" onclick="lol()" class="btn btn-danger">Start</button>
+            </center>
+            <script>
+              function lol(){
+                  if (document.getElementById("opopo").value == "no") {
+                      alert("Pls Slect Time")
+                  } else {
+                    timemin= 0
+                sec=0
+                document.getElementById("vol").src="ॐ Chanting 5 Minute- Powerful Om Mantra - Meditation Mantra - Music for Yoga & Mediation.mp3"
+                total=document.getElementById("opopo").value 
+                setInterval(call, 1000)   
+                  }
+              }
+                
+function call(){
+    sec=sec+1
+    if(sec == 60){
+        timemin= timemin+1
+        sec=0
+    }
+    document.getElementById("demo").innerHTML= timemin + ":"+sec
+    if(timemin == total){
+        document.getElementById("butt").style.display="none"
+        document.getElementById("demo").style.display="none"
+        document.getElementById("vol").src=""
+    }
+}
+                </script>
+                <script src="logout.js"></script>
+    </body>
+</html>
